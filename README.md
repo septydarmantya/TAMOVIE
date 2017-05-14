@@ -58,3 +58,9 @@
 <br>
 
 ### D. (SCREENSHOT)
+![ta1.jpg](https://s12.postimg.org/4m6hu2ue5/ta1.jpg)
+![ta2.jpg](https://s7.postimg.org/idp0bkr97/ta2.jpg)
+![ta3.jpg](https://s16.postimg.org/cbidt4t6d/ta3.jpg)
+<br>
+![ta4.jpg](https://s12.postimg.org/h5bo9ihgd/ta4.jpg)
+![ta5.jpg](https://s13.postimg.org/ayob7fbp3/ta5.jpg)
