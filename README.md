@@ -9,7 +9,7 @@
 <br>
 
 #### B. (LINK DOWNLOAD)
-<P>  </P>
+<P> https://drive.google.com/open?id=0BzcSvS4_OD1KNzJrT2Jvd191WVk </P>
 
 <br>
 
@@ -43,7 +43,9 @@
 
 <br>
 
-<P>  </P>
+<P> Aplikasi ini bernama “My Movie”. Yang dapat menampilkan urutan film berdasarkan Now Playing, Popular dan Coming Soon.Aplikasi ini dibuat dengan menggunaka navigation drawer, namun dengan menghapus beberapa konten untuk menyesuaikan kebutuhan pada aplikasinya sendiri. Dalam menampilkan list – list film menggunakan fragment tersendiri, dengan mengambi data dari database yang terdapat diinternet. Didalam fragment menggunakan card view untuk memisahkan film satu dengan film lainnya.
+Aplikasi ini berfungsi untuk menambah referensi film anda. Pada aplikasi ini sudah dipisah berdasarkan 3 kategori, yaitu Now Playing, Popular, dan Coming Soon. Pada setiap film terdapat deskripsi singkat mengenai film tersebut.
+ </P>
 
 <br>
 
