@@ -94,10 +94,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_soon) {
             fragmen = new SoonFragment();
             setTitle("Coming Soon");
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, fragmen).commitNow();
