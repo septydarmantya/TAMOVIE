@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity
             setTitle("Coming Soon");
         } else if (id == R.id.nav_fav) {
             fragment = new FavoriteFragment();
+            setTitle("Favorite List");
         }
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, fragment).commitNow();
