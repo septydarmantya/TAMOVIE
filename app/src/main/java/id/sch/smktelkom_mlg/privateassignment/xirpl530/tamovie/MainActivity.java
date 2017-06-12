@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -14,9 +15,20 @@ import android.view.MenuItem;
 import id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie.adapter.NowAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie.adapter.PopularAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie.adapter.SoonAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie.sugar.FavoriteFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, PopularAdapter.ISourceAdapter, NowAdapter.INowAdapter, SoonAdapter.ISourceAdapter {
+        implements NavigationView.OnNavigationItemSelectedListener, PopularAdapter.IPopularAdapter, NowAdapter.INowAdapter, SoonAdapter.ISoonAdapter {
+
+    public static final String RESULTPOSTER = "resultPoster";
+    public static final String RESULTOVER = "resultOverview";
+    public static final String RESULTRELEASE = "resultRelease";
+    public static final String RESULTTITLE = "resultTitle";
+    public static final String RESULTBACK = "resultBackdrop";
+    public static final String RESULTVOTE = "resultOver";
+    public static final String RESULTLANGUAGE = "resultLanguage";
+    public static final String RESULTPOPULARITY = "resultPopularity";
+    public static final String RESULTVOTECOUNT = "resultVote";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,20 +95,22 @@ public class MainActivity extends AppCompatActivity
 
     private void changePage(int id) {
 
-        Fragment fragmen = null;
+        Fragment fragment = null;
 
         if (id == R.id.nav_now) {
-            fragmen = new NowFragment();
+            fragment = new NowFragment();
             setTitle("Now Playing");
         } else if (id == R.id.nav_pop) {
-            fragmen = new PopFragment();
+            fragment = new PopFragment();
             setTitle("Popular");
         } else if (id == R.id.nav_soon) {
-            fragmen = new SoonFragment();
+            fragment = new SoonFragment();
             setTitle("Coming Soon");
+        } else if (id == R.id.nav_fav) {
+            fragment = new FavoriteFragment();
         }
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, fragmen).commitNow();
+                .replace(R.id.container, fragment).commitNow();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -104,7 +118,17 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void showArticles(String title, String overview, String poster_path) {
-
+    public void showArticles(String poster_path, String overview, String release_date, String title, String backdrop_path, String vote_average, String original_language, String popularity, String vote_count) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(RESULTPOSTER, poster_path);
+        intent.putExtra(RESULTOVER, overview);
+        intent.putExtra(RESULTRELEASE, release_date);
+        intent.putExtra(RESULTTITLE, title);
+        intent.putExtra(RESULTBACK, backdrop_path);
+        intent.putExtra(RESULTVOTE, vote_average);
+        intent.putExtra(RESULTLANGUAGE, original_language);
+        intent.putExtra(RESULTPOPULARITY, popularity);
+        intent.putExtra(RESULTVOTECOUNT, vote_count);
+        startActivity(intent);
     }
 }

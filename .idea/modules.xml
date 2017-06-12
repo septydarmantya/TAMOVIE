@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/TAMOVIE.iml" filepath="$PROJECT_DIR$/TAMOVIE.iml" />
       <module fileurl="file://$PROJECT_DIR$/TAMovie.iml" filepath="$PROJECT_DIR$/TAMovie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

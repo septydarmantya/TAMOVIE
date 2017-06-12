@@ -5,7 +5,13 @@ package id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie.model;
  */
 
 public class Result {
-    public String title;
-    public String overview;
     public String poster_path;
+    public String overview;
+    public String release_date;
+    public String title;
+    public String backdrop_path;
+    public String vote_average;
+    public String original_language;
+    public String popularity;
+    public String vote_count;
 }

@@ -21,19 +21,19 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl530.tamovie.model.Result;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
     ArrayList<Result> list;
-    PopularAdapter.ISourceAdapter mISourceAdapter;
+    PopularAdapter.IPopularAdapter mIPopularAdapter;
     Context context;
 
     public PopularAdapter(Context context, ArrayList<Result> list) {
         this.list = list;
         this.context = context;
-        mISourceAdapter = (PopularAdapter.ISourceAdapter) context;
+        mIPopularAdapter = (PopularAdapter.IPopularAdapter) context;
     }
 
     @Override
     public PopularAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.popular_list, parent, false);
+                .inflate(R.layout.list_item, parent, false);
         PopularAdapter.ViewHolder vh = new PopularAdapter.ViewHolder(v);
         return vh;
     }
@@ -41,8 +41,10 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     @Override
     public void onBindViewHolder(PopularAdapter.ViewHolder holder, int position) {
         Result result = list.get(position);
-        holder.tvName.setText(result.title);
+        holder.tvTitle.setText(result.title);
         holder.tvDesc.setText(result.overview);
+        holder.tvRelease.setText(result.release_date);
+        holder.tvRating.setText(result.vote_average);
         Glide.with(context)
                 .load("http://image.tmdb.org/t/p/w500" + result.poster_path)
                 .into(holder.ivPoster);
@@ -55,20 +57,35 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         return 0;
     }
 
-    public interface ISourceAdapter {
-        void showArticles(String title, String overview, String poster_path);
+    public interface IPopularAdapter {
+        void showArticles(String poster_path, String overview, String release_date, String title, String backdrop_path, String vote_average, String original_language, String popularity, String vote_count);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvName;
-        TextView tvDesc;
         ImageView ivPoster;
+        TextView tvTitle;
+        TextView tvDesc;
+        TextView tvRelease;
+        TextView tvRating;
+        TextView tvPopularity;
+        TextView tvVote;
+        TextView tvLanguage;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ivPoster = (ImageView) itemView.findViewById(R.id.imageViewPoster);
-            tvName = (TextView) itemView.findViewById(R.id.textViewName);
-            tvDesc = (TextView) itemView.findViewById(R.id.textViewDesc);
+            tvTitle = (TextView) itemView.findViewById(R.id.textViewTitle);
+            tvDesc = (TextView) itemView.findViewById(R.id.textViewOverview);
+            tvRelease = (TextView) itemView.findViewById(R.id.textViewDate);
+            tvRating = (TextView) itemView.findViewById(R.id.textViewRating);
+            tvPopularity = (TextView) itemView.findViewById(R.id.VoteAverage);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Result result = list.get(getAdapterPosition());
+                    mIPopularAdapter.showArticles(result.poster_path, result.overview, result.release_date, result.title, result.backdrop_path, result.vote_average, result.original_language, result.popularity, result.vote_count);
+                }
+            });
         }
     }
 }
