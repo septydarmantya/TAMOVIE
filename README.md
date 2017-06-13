@@ -68,7 +68,7 @@ Aplikasi ini berfungsi untuk menambah referensi film anda. Pada aplikasi ini sud
 
 <br>
 
-### I. (KELEBIHAN)
+### I. (Library Lain)
 
 <br>
 
