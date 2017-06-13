@@ -9,7 +9,8 @@
 <br>
 
 #### B. (LINK DOWNLOAD)
-<P> https://drive.google.com/open?id=0BzcSvS4_OD1KNzJrT2Jvd191WVk </P>
+
+[Download Aplikasi](https://drive.google.com/uc?export=download&id=0B36Y2xO8CvzlQjVQMGVvNXExZFE)
 
 <br>
 
@@ -39,7 +40,15 @@
 
 <br>
 
-### F. (DERKRIPSI APLIKASI)
+### F. (LOCAL DATABASE)
+
+<br>
+
+<P> SugarORM </P>
+
+<br>
+
+### G. (DERKRIPSI APLIKASI)
 
 <br>
 
@@ -49,7 +58,7 @@ Aplikasi ini berfungsi untuk menambah referensi film anda. Pada aplikasi ini sud
 
 <br>
 
-### G. (KELEBIHAN)
+### H. (KELEBIHAN)
 
 <br>
 
@@ -59,10 +68,16 @@ Aplikasi ini berfungsi untuk menambah referensi film anda. Pada aplikasi ini sud
 
 <br>
 
-### D. (SCREENSHOT)
-![ta1.jpg](https://s12.postimg.org/4m6hu2ue5/ta1.jpg)
-![ta2.jpg](https://s7.postimg.org/idp0bkr97/ta2.jpg)
-![ta3.jpg](https://s16.postimg.org/cbidt4t6d/ta3.jpg)
+### I. (KELEBIHAN)
+
 <br>
-![ta4.jpg](https://s12.postimg.org/h5bo9ihgd/ta4.jpg)
-![ta5.jpg](https://s13.postimg.org/ayob7fbp3/ta5.jpg)
+
+- Intro/Guide Aplikasi - 'com.github.deano2390:MaterialShowcaseView:1.1.0'
+
+<br>
+
+### J. (SCREENSHOT)
+
+<img src="https://user-images.githubusercontent.com/22045961/27064457-ab0adda8-5021-11e7-83c9-0e348b61bc2c.jpg" width="300" height="515" /><img src="https://user-images.githubusercontent.com/22045961/27064458-ab67f7ea-5021-11e7-9a3f-bea25f93b289.jpg" width="300" height="515" />
+<img src="https://user-images.githubusercontent.com/22045961/27064459-abb54cac-5021-11e7-96d3-73e032af79c7.png" width="300" height="515" /><img src="https://user-images.githubusercontent.com/22045961/27064462-ac723cae-5021-11e7-9e99-d358b2b917fd.png" width="300" height="515" />
+<img src="https://user-images.githubusercontent.com/22045961/27064460-ac6988ca-5021-11e7-8521-c65d8cbbb460.png" width="300" height="515" /><img src="https://user-images.githubusercontent.com/22045961/27064461-ac6c1b6c-5021-11e7-9285-e75dcc86c7ec.png" width="300" height="515" />
